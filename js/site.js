@@ -9,6 +9,6 @@ async function getData(){
 
 getData();
 
-function renderResults() {
-    
+function renderResults(sortOption) {
+    console.log(sortOption);
 }
