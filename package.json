@@ -1,5 +1,2 @@
-{
-  "dependencies": {
-    "squirrelly": "^9.0.0"
-  }
-}
+{"dependencies":{"handlebars":"^4.7.8"}}
+

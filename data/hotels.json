@@ -1,0 +1,65 @@
+[
+    {
+        "hotels": [
+            {
+                "id": 0,
+                "hotelName": "Iberostar Grand Salome",
+                "resortName": "Costa Adeje",
+                "locationName": "Tenerife",
+                "starRating": 5,
+                "hotelImage": "img/hotel-image-1.png",
+                "hotelDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nisl at urna bibendum sagittis id at turpis. Sed pellentesque enim mauris, quis ornare felis commodo facilisis. Cras vulputate quam ac libero iaculis finibus. Vivamus porttitor posuere nibh, at ornare turpis lobortis at. Mauris enim nunc, sagittis quis dictum condimentum, auctor ultricies purus."
+            },{
+                "id": 1,
+                "hotelName": "Aguamarina Golf Hotel",
+                "resortName": "Costa Adeje",
+                "locationName": "Tenerife",
+                "starRating": 4,
+                "hotelImage": "img/hotel-image-2.png",
+                "hotelDescription": "Nunc ac porta felis, sit amet consequat mi. Nunc pharetra blandit massa sed sodales. Mauris cursus accumsan lorem, sit amet tincidunt justo dapibus eu. Nulla lacinia mauris malesuada iaculis consequat. Aenean luctus egestas magna, sit amet efficitur tellus pellentesque ac."
+            },{
+                "id": 2,
+                "hotelName": "Las Piramides Resort",
+                "resortName": "Costa Adeje",
+                "locationName": "Tenerife",
+                "starRating": 3,
+                "hotelImage": "img/hotel-image-3.png",
+                "hotelDescription": "Vivamus sollicitudin dui at felis convallis vehicula. Phasellus semper ex nisl, a aliquam purus mollis sed. Proin facilisis, ligula id sagittis hendrerit, lacus est tincidunt dui, eu posuere lectus magna eu massa. Donec egestas facilisis dui et venenatis. Nam nec posuere ligula. "
+            }
+        ]
+    },{
+        "holidayResults": [
+            {
+                "id": 0,
+                "hotelId": 0,
+                "adults": 2,
+                "children": 2,
+                "infants": 1,
+                "departDate": "3/7/2019",
+                "duration": 7,
+                "departureAirport": "East Midlands",
+                "price": "1136.50"
+            },{
+                "id": 1,
+                "hotelId": 1,
+                "adults": 2,
+                "children": 1,
+                "infants": 0,
+                "departDate": "27/5/2019",
+                "duration": 7,
+                "departureAirport": "Liverpool",
+                "price": "696.80"
+            },            {
+                "id": 2,
+                "hotelId": 2,
+                "adults": 2,
+                "children": 2,
+                "infants": 0,
+                "departDate": "3/7/2019",
+                "duration": 7,
+                "departureAirport": "Manchester",
+                "price": "499.99"
+            }
+        ]
+    }
+]
