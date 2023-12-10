@@ -1,5 +1,6 @@
-[
-    {
+
+{
+    "data": {
         "hotels": [
             {
                 "id": 0,
@@ -26,8 +27,7 @@
                 "hotelImage": "img/hotel-image-3.png",
                 "hotelDescription": "Vivamus sollicitudin dui at felis convallis vehicula. Phasellus semper ex nisl, a aliquam purus mollis sed. Proin facilisis, ligula id sagittis hendrerit, lacus est tincidunt dui, eu posuere lectus magna eu massa. Donec egestas facilisis dui et venenatis. Nam nec posuere ligula. "
             }
-        ]
-    },{
+        ],
         "holidayResults": [
             {
                 "id": 0,
@@ -62,4 +62,4 @@
             }
         ]
     }
-]
+}
