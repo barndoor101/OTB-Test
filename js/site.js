@@ -22,7 +22,7 @@ function renderResults(data) {
     holidayData.forEach(holiday => {
         hotelData.forEach(hotel => {
             if (holiday.hotelId === hotel.id) {
-                holiday.departDate = dayjs(holiday.departDate, "DD/MM/YYYY").format('D MMM YYYY');
+                holiday.departDate = dayjs(holiday.departDate).format('D MMM YYYY');
                 holidayResult = {...holiday, ...hotel}
                 resultArray.push(holidayResult)
             }
@@ -36,6 +36,8 @@ function renderResults(data) {
 }
 
 function sortByRating() {
+    $('.sortButton').removeClass('active');
+    $('#sortByRating').addClass('active');
     var $wrapper = $('#contentContainer');
     orderRating = !orderRating;
     $wrapper.find('.hotelContainer').sort(function(a, b) {
@@ -44,7 +46,9 @@ function sortByRating() {
     .appendTo($wrapper);
 }
 
-function sortByName(order) {
+function sortByName() {
+    $('.sortButton').removeClass('active');
+    $('#sortByName').addClass('active');
     var $wrapper = $('#contentContainer');
     orderName = !orderName;
     $wrapper.find('.hotelContainer').sort(function(a, b) {
@@ -53,7 +57,9 @@ function sortByName(order) {
     .appendTo($wrapper);
 }
 
-function sortByPrice(order) {
+function sortByPrice() {
+    $('.sortButton').removeClass('active');
+    $('#sortByPrice').addClass('active');
     var $wrapper = $('#contentContainer');
     orderPrice = !orderPrice
     $wrapper.find('.hotelContainer').sort(function(a, b) {
@@ -63,7 +69,7 @@ function sortByPrice(order) {
 }
 
 function expandDrawer(id) {
-    let drawer = $(id).siblings('.expandDrawer')
+    let drawer = $('#drawer-' + id);
     drawer.toggleClass('hide');
 }
 
@@ -76,6 +82,10 @@ window.onload = function() {
           result += `&#9733;`;
         }
         return new Handlebars.SafeString(result);
+    });
+
+    Handlebars.registerHelper('json', function(context) {
+        return JSON.stringify(context);
     });
 
 };

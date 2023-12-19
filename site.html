@@ -2,7 +2,6 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -23,9 +22,9 @@
         <div id="mainContainer" class="container">
             <div class="row">
                 <div id="sortContainer" class="three columns">
-                    <div class="sortButton" onclick="sortByName()">sort <span class="bold">alpabetically</span></div>
-                    <div class="sortButton" onclick="sortByPrice()">sort by <span class="bold">price</span></div>
-                    <div class="sortButton" onclick="sortByRating()">sort by <span class="bold">star rating</span></div>
+                    <div id="sortByName" class="sortButton padding-5" onclick="sortByName()">sort <span class="bold">alphabetically</span><img src="img/sort-alpha.png" class="sortImage" /></div>
+                    <div id="sortByPrice" class="sortButton padding-5" onclick="sortByPrice()">sort by <span class="bold">price</span><img src="img/sort-price.png" class="sortImage" /></div>
+                    <div id="sortByRating" class="sortButton padding-5" onclick="sortByRating()">sort by <span class="bold">star rating</span><img src="img/sort-rating.png" class="sortImage" /></div>
                 </div>
                 <div id="contentContainer" class="nine columns">
                 </div>
@@ -36,8 +35,11 @@
             <div class="hotelContainer" data-price="{{price}}" data-name="{{hotelName}}" data-rating="{{starRating}}">
                 <div class="hotelMain">
                     <div class="row">
-                        <div class="eight columns">
+                        <div class="imgContainer eight columns">
                             <img src={{hotelImage}} width="100%" />
+                            <div class="expandButton blue padding-5" onclick="expandDrawer({{json holidayId}})">
+                                <span class="bold">Read more</span> about this hotel
+                            </div>
                         </div>
                         <div class="four columns hotelDetails">
                             <div class="hotelName bold blue">{{hotelName}}</div>
@@ -46,7 +48,7 @@
                             <div class="occupantDetails"><span class="bold">{{adults}}</span> adults, <span class="bold">{{children}}</span> children {{#if infants}}& <span class="bold">{{infants}}</span> infant {{/if}}</div>
                             <div class="dateDetails"><span class="bold">{{departDate}}</span> for {{duration}} days</div>
                             <div class="airportDetails">departing from <span class="bold">{{departureAirport}}</span></div>
-                            <div class="hotelPrice blue">
+                            <div class="hotelPrice blue padding-5">
                                 <div class="bold">Book now</div>
                                 <div class="hotelPriceNumber bold">£{{price}}</div>
                             </div>
@@ -54,10 +56,7 @@
                     </div>
                 </div>
                 <div class="hotelExpand">
-                    <div class="expandButton blue" onclick="expandDrawer(this)">
-                        <span class="bold">Read more</span> about this hotel
-                    </div>
-                    <div class="hide expandDrawer">
+                    <div class="hide expandDrawer padding-10" id="drawer-{{holidayId}}">
                         <div class="expandHeading bold blue">Overview</div>
                         <div class="expandBody">{{hotelDescription}}</div>
                     </div>

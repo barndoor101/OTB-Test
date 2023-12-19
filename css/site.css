@@ -36,7 +36,15 @@ img {
     display: none;
 }
 
+.padding-5 {
+    padding: 5px;
+}
 
+.padding-10 {
+    padding: 10px;
+}
+
+/* Actual styling */
 
 #mainContainer {
     margin-top: 100px;
@@ -44,14 +52,18 @@ img {
 
 .hotelContainer {
     margin-bottom: 20px;
-    position: relative;
 }
 
 .hotelMain {
     background-color: white;
 }
 
+.hotelName {
+    font-size: 16px;
+}
+
 .hotelDetails {
+    padding-top: 5px;
     padding-right: 4%;
 }
 
@@ -59,11 +71,6 @@ img {
     background-color: white;
     position: absolute;
     bottom: 0;
-    padding: 5px;
-}
-
-.expandHeading {
-    
 }
 
 .hotelExpand {
@@ -72,7 +79,6 @@ img {
 
 .hotelPrice {
     background-color: #fedc07;
-    padding: 5px;
     text-align: center;
     margin-top: 20px;
 }
@@ -90,8 +96,25 @@ img {
     height: 40px;
     line-height: 40px;
     font-size: 18px;
-    padding: 0 5px;
-    word-wrap: break-word;
     background-color: white;
     border-bottom: 1px solid #17317f;
+}
+
+.sortImage {
+    height: 30px;
+    margin: 5px 0;
+    float: right;
+}
+
+.sortButton.active {
+    background-color: #17317f;
+    color: white;
+}
+
+.sortButton:last-child {
+    border: none;
+}
+
+.imgContainer {
+    position: relative;
 }

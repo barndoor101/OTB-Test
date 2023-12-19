@@ -35,7 +35,7 @@
                 "adults": 2,
                 "children": 2,
                 "infants": 1,
-                "departDate": "3/7/2019",
+                "departDate": "7/3/2019",
                 "duration": 7,
                 "departureAirport": "East Midlands",
                 "price": "1136.50"
@@ -45,7 +45,7 @@
                 "adults": 2,
                 "children": 1,
                 "infants": 0,
-                "departDate": "27/5/2019",
+                "departDate": "5/27/2019",
                 "duration": 7,
                 "departureAirport": "Liverpool",
                 "price": "696.80"
@@ -55,7 +55,7 @@
                 "adults": 2,
                 "children": 2,
                 "infants": 0,
-                "departDate": "3/7/2019",
+                "departDate": "7/3/2019",
                 "duration": 7,
                 "departureAirport": "Manchester",
                 "price": "499.99"
@@ -65,7 +65,7 @@
                 "adults": 2,
                 "children": 2,
                 "infants": 0,
-                "departDate": "3/7/2019",
+                "departDate": "8/3/2019",
                 "duration": 14,
                 "departureAirport": "Manchester",
                 "price": "999.99"
