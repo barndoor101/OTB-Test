@@ -2,10 +2,70 @@ html {
     height: 100%;
     width: 100%;
 }
+
 body {
     background-image: url(../img/background.png);
     background-repeat: repeat-x;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-div {
-    border: 1px solid black;
+
+/* Helpers */
+
+.bold {
+    font-weight: bold;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.blue {
+    color: #17317f;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+#mainContainer {
+    margin-top: 100px;
+}
+
+.hotelContainer {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.hotelMain {
+    background-color: white;
+}
+
+.expandButton {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+}
+
+.expandHeading {
+    
+}
+
+.hotelExpand {
+
+}
+
+.hotelPrice {
+    background-color: #fedc07;
+    text-align: center;
+}
+
+.starRating {
+    color: #fedc07;
 }

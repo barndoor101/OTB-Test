@@ -30,7 +30,7 @@
         ],
         "holidayResults": [
             {
-                "id": 0,
+                "holidayId": 0,
                 "hotelId": 0,
                 "adults": 2,
                 "children": 2,
@@ -40,7 +40,7 @@
                 "departureAirport": "East Midlands",
                 "price": "1136.50"
             },{
-                "id": 1,
+                "holidayId": 1,
                 "hotelId": 1,
                 "adults": 2,
                 "children": 1,
@@ -49,8 +49,8 @@
                 "duration": 7,
                 "departureAirport": "Liverpool",
                 "price": "696.80"
-            },            {
-                "id": 2,
+            },{
+                "holidayId": 2,
                 "hotelId": 2,
                 "adults": 2,
                 "children": 2,
@@ -59,6 +59,16 @@
                 "duration": 7,
                 "departureAirport": "Manchester",
                 "price": "499.99"
+            },{
+                "holidayId": 3,
+                "hotelId": 2,
+                "adults": 2,
+                "children": 2,
+                "infants": 0,
+                "departDate": "3/7/2019",
+                "duration": 14,
+                "departureAirport": "Manchester",
+                "price": "999.99"
             }
         ]
     }

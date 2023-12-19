@@ -10,22 +10,64 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/site.css">
-    </head>
-    <body>
         <script src="js/handlebars-v4.7.8.js" defer></script>
         <script src="js/jquery-3.7.1.min.js" defer></script>
         <script src="js/dayjs.min.js" defer></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
         <script src="js/site.js" defer></script>
         
-        <div id="mainContainer">
-            <div id="sortContainer">
-
-            </div>
-            <div id="contentContainer">
-
+        <div id="mainContainer" class="container">
+            <div class="row">
+                <div id="sortContainer" class="two columns">
+                    <div>sort alpabetically</div>
+                    <div>sort by price</div>
+                    <div>sort bt star rating</div>
+                </div>
+                <div id="contentContainer" class="ten columns">
+                </div>
             </div>
         </div>
+        </div>
+
+
+        <script id="holidayResult" type="text/x-handlebars-template">
+            {{#each this}}
+            <div class="hotelContainer" data-price="{{price}}" data-name="{{hotelName}}" data-rating="{{starRating}}">
+                <div class="hotelMain">
+                    <div class="row">
+                        <div class="eight columns">
+                            <img src={{hotelImage}} width="100%" />
+                        </div>
+                        <div class="four columns hotelDetails">
+                            <div class="hotelName bold blue">{{hotelName}}</div>
+                            <div class="resortName light">{{resortName}}, {{locationName}}</div>
+                            <div class="starRating">{{#renderStars starRating}}a{{/renderStars}}</div>
+                            <div class="occupantDetails"><span class="bold">{{adults}}</span> adults, <span class="bold">{{children}}</span> children {{#if infants}}& <span class="bold">{{infants}}</span> infant {{/if}}</div>
+                            <div class="dateDetails"><span class="bold">{{departDate}}</span> for {{duration}} days</div>
+                            <div class="airportDetails">departing from <span class="bold">{{departureAirport}}</span></div>
+                            <div class="hotelPrice blue">
+                                <div class="bold">Book now</div>
+                                <div class="bold">£{{price}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotelExpand">
+                    <div class="expandButton blue" onclick="expandDrawer(this)">
+                        <span class="bold">Read more</span> about this hotel
+                    </div>
+                    <div class="hide expandDrawer">
+                        <div class="expandHeading bold blue">Overview</div>
+                        <div class="expandBody">{{hotelDescription}}</div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </script>
         
     </body>
 </html>
