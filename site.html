@@ -22,18 +22,15 @@
         
         <div id="mainContainer" class="container">
             <div class="row">
-                <div id="sortContainer" class="two columns">
-                    <div>sort alpabetically</div>
-                    <div>sort by price</div>
-                    <div>sort bt star rating</div>
+                <div id="sortContainer" class="three columns">
+                    <div class="sortButton" onclick="sortByName()">sort <span class="bold">alpabetically</span></div>
+                    <div class="sortButton" onclick="sortByPrice()">sort by <span class="bold">price</span></div>
+                    <div class="sortButton" onclick="sortByRating()">sort by <span class="bold">star rating</span></div>
                 </div>
-                <div id="contentContainer" class="ten columns">
+                <div id="contentContainer" class="nine columns">
                 </div>
             </div>
         </div>
-        </div>
-
-
         <script id="holidayResult" type="text/x-handlebars-template">
             {{#each this}}
             <div class="hotelContainer" data-price="{{price}}" data-name="{{hotelName}}" data-rating="{{starRating}}">
@@ -51,7 +48,7 @@
                             <div class="airportDetails">departing from <span class="bold">{{departureAirport}}</span></div>
                             <div class="hotelPrice blue">
                                 <div class="bold">Book now</div>
-                                <div class="bold">£{{price}}</div>
+                                <div class="hotelPriceNumber bold">£{{price}}</div>
                             </div>
                         </div>
                     </div>
