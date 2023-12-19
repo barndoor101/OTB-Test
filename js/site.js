@@ -35,37 +35,32 @@ function renderResults(data) {
     document.getElementById('contentContainer').innerHTML = rendered;
 }
 
-function sortByRating() {
+function sortBy(item) {
     $('.sortButton').removeClass('active');
-    $('#sortByRating').addClass('active');
     var $wrapper = $('#contentContainer');
-    orderRating = !orderRating;
-    $wrapper.find('.hotelContainer').sort(function(a, b) {
-        return (orderRating ? +b.dataset.rating - +a.dataset.rating : +a.dataset.rating - +b.dataset.rating)
-    })
-    .appendTo($wrapper);
-}
-
-function sortByName() {
-    $('.sortButton').removeClass('active');
-    $('#sortByName').addClass('active');
-    var $wrapper = $('#contentContainer');
-    orderName = !orderName;
-    $wrapper.find('.hotelContainer').sort(function(a, b) {
-        return (orderName ? String.prototype.localeCompare.call($(a).data('name').toLowerCase(), $(b).data('name').toLowerCase()) : String.prototype.localeCompare.call($(b).data('name').toLowerCase(), $(a).data('name').toLowerCase()));
-    })
-    .appendTo($wrapper);
-}
-
-function sortByPrice() {
-    $('.sortButton').removeClass('active');
-    $('#sortByPrice').addClass('active');
-    var $wrapper = $('#contentContainer');
-    orderPrice = !orderPrice
-    $wrapper.find('.hotelContainer').sort(function(a, b) {
-        return (orderPrice ? +b.dataset.price - +a.dataset.price : +a.dataset.price - +b.dataset.price);
-    })
-    .appendTo($wrapper);
+    
+    if (item == 'price') {
+        orderPrice = !orderPrice;
+        $('#sortByPrice').addClass('active');
+        $wrapper.find('.hotelContainer').sort(function(a, b) {
+            return (orderPrice ? +b.dataset.price - +a.dataset.price : +a.dataset.price - +b.dataset.price);
+        })
+        .appendTo($wrapper);
+    } else if (item == 'rating') {
+        orderRating = !orderRating;
+        $('#sortByRating').addClass('active');
+        $wrapper.find('.hotelContainer').sort(function(a, b) {
+            return (orderRating ? +b.dataset.rating - +a.dataset.rating : +a.dataset.rating - +b.dataset.rating)
+        })
+        .appendTo($wrapper);
+    } else if (item == 'name') {
+        orderName = !orderName;
+        $('#sortByName').addClass('active');
+        $wrapper.find('.hotelContainer').sort(function(a, b) {
+            return (orderName ? String.prototype.localeCompare.call($(a).data('name').toLowerCase(), $(b).data('name').toLowerCase()) : String.prototype.localeCompare.call($(b).data('name').toLowerCase(), $(a).data('name').toLowerCase()));
+        })
+        .appendTo($wrapper);
+    }
 }
 
 function expandDrawer(id) {
