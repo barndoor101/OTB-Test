@@ -81,15 +81,11 @@ img {
     background-color: #fedc07;
     text-align: center;
     margin-top: 20px;
+    border-radius: 5px;
 }
 
 .hotelPriceNumber {
     font-size: 22px;
-}
-
-.starRating {
-    color: #fedc07;
-    font-size: 20px;
 }
 
 .sortButton {

@@ -79,7 +79,7 @@ window.onload = function() {
     Handlebars.registerHelper('renderStars', (rating) => {
         let result = '';
         for (let i = 1; i <= rating; i++) {
-          result += `&#9733;`;
+          result += `<img src="img/star-yellow.png" width="25px" class="inlineBlock" />`;
         }
         return new Handlebars.SafeString(result);
     });
